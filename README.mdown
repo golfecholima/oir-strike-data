@@ -1,3 +1,7 @@
 # README
 
 ### This is a project that collects and analyzes data about counter ISIL airstrikes in Syria and Iraq as part of Operation Inherent Resolve.
+
+Converts all PDFs in a folder to .txt (requires [xpdf](http://foolabs.com/xpdf/):
+
+ ```ls *.pdf | while read -r fname; do echo $fname; pdftotext -layout "$fname" "$fname.txt"; done
