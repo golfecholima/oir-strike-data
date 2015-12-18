@@ -13,5 +13,20 @@ rawText = pageObj.extractText()
 import re
 
 cleanText = re.sub(r'\n', "", rawText)
-cleanText = re.sub(r'  ', "\n", cleanText)
+finalText = re.sub(r'  ', "\n", cleanText)
 
+# Can all be simplified down to
+
+release = open('/path/to/pdf.pdf', 'rb')
+
+rawText = PyPDF2.PdfFileReader(release).getPage(0).extractText()
+
+finalText = re.sub(r'  ', "\n", re.sub(r'\n', "", rawText))
+
+print (finalText)
+
+# OR
+
+print (re.sub(r'  ', "\n", re.sub(r'\n', "", PyPDF2.PdfFileReader(open('/path/to/pdf.pdf', 'rb')).getPage(0).extractText())))
+
+# OOF
