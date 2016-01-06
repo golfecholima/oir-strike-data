@@ -7,14 +7,14 @@ count = []
 
 def job():
 	for file in os.listdir(tmp):
-		print 'Converting', file,'to text ...' 
+		print '\nConverting', file,'to text ...\n' 
 		pdf = open(file, 'rb') # read the pdf file
 		totpages = PyPDF2.PdfFileReader(pdf).getNumPages()
-		print 'This document has', totpages, 'pages'
-		raw = PyPDF2.PdfFileReader(pdf).getPage(0).extractText() # read it with PyPDF2, get each page, extract the text
-		final = re.sub(r'  ', '\n', re.sub(r'\n', '', raw)) # do some regex to make it more readable
-		print 'Here\'s the converted text:\n', final
+		print 'This document has', totpages, 'pages\n'
+		for page in PyPDF2.PdfFileReader(pdf).pages: 
+			raw = page.extractText() # extract the text of each page
+			final = re.sub(r'  ', '\n', re.sub(r'\n', '', raw)) # do some regex to make it more readable
+		print 'Here\'s the converted text:\n\n', final
 		# write a file with the converted text and save it in the TXT folder
 		# move the original PDF to the PDFs folder
-
 job()
