@@ -1,7 +1,42 @@
-# README
+# WHAT'S THIS?
 
-### This is a project that collects and analyzes data about counter ISIL airstrikes in Syria and Iraq as part of Operation Inherent Resolve.
+### This is a project that collects and analyzes data about counter ISIL airstrikes in Syria and Iraq as part of Operation Inherent Resolve. The code aims to do to the following:
 
-Converts all PDFs in a folder to .txt (requires [xpdf](http://foolabs.com/xpdf/)):
+1. Get OIR strike PDFs from the internet.
+2. Convert those PDFs to plain text.
+3. Make structured data out of that plain text.
+4. Profit: reporting, dataviz, blablabla.
 
- `ls *.pdf | while read -r fname; do echo $fname; pdftotext -layout "$fname" "$fname.txt"; done`
+### Who made this?
+
+For now, just [this guy](https://github.com/golfecholima).
+
+### Who's this for?
+
+I work for [Defense One](http://defenseone.com), so Defense One (and me). But really, anyone who's interested in playing around with the data/code, interested in things military or [Operation Inherent Resolve](https://en.wikipedia.org/wiki/Operation_Inherent_Resolve) specifically.
+
+### Getting started
+
+TK
+
+### In the wild
+
+TK
+
+### Support
+
+TK
+
+### Languages
+
+TK
+
+### Want to help?
+
+Fork this sucker or email george dot levines at gmail dot com.
+
+As of 01/05/16 this project is still active.
+
+### Licensing
+
+TK
