@@ -64,11 +64,14 @@ for file in glob.glob('*/*/*.pdf'):
 
 ***
 
+# This converts a file in tmp dir from PDF to txt and prints it
+
 import os, schedule, time, PyPDF2, re
 
 tmp = '/Users/workmcgerk/Desktop/repos/oir-strike-data/tmp'
 pdf_folder = '/Users/workmcgerk/Desktop/repos/oir-strike-data/PDF/oir-strike-releases-pdf'
 txt_folder = '/Users/workmcgerk/Desktop/repos/oir-strike-data/TXT/oir-strike-releases-txt'
+count = []
 
 def job():
 	for file in os.listdir(tmp):
@@ -81,5 +84,6 @@ def job():
 			final = re.sub(r'  ', '\n', re.sub(r'\n', '', raw)) # do some regex to make it more readable
 		print 'Here\'s the converted text:\n\n', final
 		# write a file with the converted text and save it in the TXT folder
+		print 'It\'s now stored in', TKTK,
 		# move the original PDF to the PDFs folder
 job()

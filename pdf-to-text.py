@@ -7,6 +7,10 @@ count = []
 
 def job():
 	for file in os.listdir(tmp):
+		pdfname = file.replace(' ', '-')
+		txtname = pdfname.replace('pdf', 'txt')
+		print 'Creating', txtname
+		txtfile = open(txtname, 'w')
 		print '\nConverting', file,'to text ...\n' 
 		pdf = open(file, 'rb') # read the pdf file
 		totpages = PyPDF2.PdfFileReader(pdf).getNumPages()
@@ -15,6 +19,6 @@ def job():
 			raw = page.extractText() # extract the text of each page
 			final = re.sub(r'  ', '\n', re.sub(r'\n', '', raw)) # do some regex to make it more readable
 		print 'Here\'s the converted text:\n\n', final
-		# write a file with the converted text and save it in the TXT folder
-		# move the original PDF to the PDFs folder
+		txtfile.write(final) # write a file with the converted text and save it in the TXT folder
+		print 'It\'s now stored in TKTK' # move the original PDF to the PDFs folder
 job()

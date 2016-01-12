@@ -13,7 +13,7 @@ For now, just [this guy](https://github.com/golfecholima).
 
 ### Who's this for?
 
-I work for [Defense One](http://defenseone.com), so Defense One (and me). But really, anyone who's interested in playing around with the data/code, interested in things military or [Operation Inherent Resolve](https://en.wikipedia.org/wiki/Operation_Inherent_Resolve) specifically.
+Anyone who's interested in playing around with the data/code, interested in things military or [Operation Inherent Resolve](https://en.wikipedia.org/wiki/Operation_Inherent_Resolve) specifically.
 
 ### Getting started
 
